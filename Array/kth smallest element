@@ -1,0 +1,25 @@
+import java.io.*;
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int[] arr = new int[n];
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+        int a = sc.nextInt();
+
+        sol obj = new sol();
+        System.out.println(obj.smal(arr, 0, n - 1, a));
+    
+    }
+}
+
+class sol {
+    public static  int smal(int[] arr, int l, int r, int a) {
+        Arrays.sort(arr);
+        return arr[a - 1];
+    }
+}
