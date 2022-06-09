@@ -1,0 +1,22 @@
+public class Main
+{
+    static final int no=256;
+    static void fcount(String str,int[] count ){
+        for(int i=0;i<str.length();i++){
+            count[str.charAt(i)]++;
+        }
+    }
+    static void print(String str){
+        int[] count= new int[no];
+        fcount(str,count);
+        for(int i=0;i<no;i++){
+            if(count[i]>1){
+                System.out.println((char)(i)+", count ="+count[i]);
+            }
+        }
+    }
+	public static void main(String[] args) {
+		String str="aashi mehrotra";
+		print(str);
+	}
+}
